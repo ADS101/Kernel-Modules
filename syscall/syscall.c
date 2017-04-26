@@ -41,7 +41,6 @@ static int uid;
 module_param(uid, int, 0644);
 
 /*
- *
  * A pointer to the origional system call. We dont call the origional function
  * because the system call may have been replaced. This is not safe since if
  * another module replaced sys_open before us, we'll call the ufnction in that
@@ -99,7 +98,7 @@ int init_module()
 	 * origional call, and the replace system call
 	 * in the system call table with our_sys_open
 	 */
-	original_call = sys_call_table[__NR_OPEN];
+	original_call = sys_call_table[__NR_open];
 	sys_call_table[__NR_open] = our_sys_open;
 
 	printk(KERN_INFO "Spying on UID:%d\n", uid);
