@@ -119,3 +119,5 @@ void cleanup_module()
 	sys_call_table[__NR_open] = original_call;
 }
 
+
+MODULE_LICENSE("James Doidge");

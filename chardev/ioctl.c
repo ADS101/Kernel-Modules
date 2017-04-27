@@ -1,10 +1,10 @@
-#include "chardev2.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 
+#include "chardev2.h"
 ioctl_set_msg(int file_desc, char *message)
 {
 	int ret_val;

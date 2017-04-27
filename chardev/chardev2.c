@@ -2,11 +2,14 @@
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <asm/uaccess.h>
-
+#include <asm/errno.h>
 #include "chardev2.h"
+
+
 #define SUCCESS 0
 #define DEVICE_NAME "char_dev"
 #define BUF_LEN 80
+
 
 static int Device_Open = 0;
 
